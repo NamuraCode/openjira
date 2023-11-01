@@ -1,7 +1,15 @@
-export default function Home() {
+import { Layout } from '@/layout';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Home Page',
+  description: 'dashboard open-jira',
+};
+
+export default function HomePage() {
   return (
-    <main>
+    <Layout>
       <h1>Hola mundo</h1>
-    </main>
-  )
+    </Layout>
+  );
 }
