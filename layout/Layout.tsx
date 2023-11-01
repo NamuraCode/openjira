@@ -6,7 +6,7 @@ interface layoutProps {
 
 export const Layout = ({ children }: layoutProps) => {
   return (
-    <main className="o">
+    <main>
       <h2>layout</h2>
       {children}
     </main>
