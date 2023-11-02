@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@mui/material";
-import { darkTheme } from "@/themes";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { darkTheme, lightTheme } from "@/themes";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,9 +17,10 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
         />
-        <link rel="shortcut icon" href="/next.svg"/> 
+        <link rel="shortcut icon" href="/next.svg" />
       </head>
       <ThemeProvider theme={darkTheme}>
+        <CssBaseline />
         <body className={inter.className}>{children}</body>
       </ThemeProvider>
     </html>
