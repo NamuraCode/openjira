@@ -1,4 +1,4 @@
-import { Layout } from '@/layout';
+import RootLayout from './layout';
 import { Typography } from '@mui/material';
 // import { Metadata } from 'next';
 
@@ -9,8 +9,8 @@ import { Typography } from '@mui/material';
 
 export default function HomePage() {
   return (
-    <Layout title='home'>
+    <RootLayout title='home'>
       <Typography variant='h1'>Hello World</Typography>
-    </Layout>
+    </RootLayout>
   );
 }

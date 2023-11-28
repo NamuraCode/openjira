@@ -4,15 +4,11 @@ import { ReactNode } from "react";
 
 interface layoutProps {
   children: ReactNode;
-  title: string;
 }
 
-export const Layout = async({ title = 'opernJira', children }: layoutProps) => {
+export const CustomLayout = ({ children }: layoutProps) => {
   return (
     <Box sx={{flexFlow:1}}>
-      <Head>
-        <title>{title}</title>
-      </Head>
       <Box sx={{padding: '10px 20px' }}>
         {children}
       </Box>
