@@ -1,4 +1,5 @@
 import { Layout } from '@/layout';
+import { Typography } from '@mui/material';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <Layout>
-      <h1>Hola mundo</h1>
+      <Typography variant='h1'>Hello World</Typography>
     </Layout>
   );
 }
