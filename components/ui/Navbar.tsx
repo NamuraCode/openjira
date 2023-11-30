@@ -12,7 +12,7 @@ export const Navbar = () => {
                 >
                     <MenuIcon/>
                 </IconButton>
-                <Typography variant="h2" >OpenJira</Typography>
+                <Typography variant="h6" >OpenJira</Typography>
             </Toolbar>
         </AppBar>
      )
