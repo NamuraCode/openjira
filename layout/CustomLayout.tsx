@@ -1,15 +1,14 @@
-import { Box } from "@mui/material"
-import { ReactNode } from "react"
+import { Box } from "@mui/material";
+import { ReactNode } from "react";
 
 interface CustomLayoutProps {
-    children: ReactNode
+  children: ReactNode;
 }
 
-export const CustomLayout = ({children}: CustomLayoutProps) => {
-
-    return (
-      <Box>
-        {children}
-       </Box>
-     )
-  }
+export const CustomLayout = ({ children }: CustomLayoutProps) => {
+  return (
+    <Box sx={{ flexFlow: 1 }}>
+      <Box sx={{ padding: "10px 20px" }}>{children}</Box>
+    </Box>
+  );
+};
