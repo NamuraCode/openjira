@@ -1,18 +1,17 @@
+"use client";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import { darkTheme, lightTheme } from "@/themes";
-import { LayoutRouter } from "next/dist/server/app-render/entry-base";
-import { CustomLayout } from "@/layout";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
-  title
+  title,
 }: {
   children: React.ReactNode;
-  title: string
+  title: string;
 }) {
   return (
     <html lang="en">
@@ -26,11 +25,7 @@ export default function RootLayout({
       </head>
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
-        <body className={inter.className}>
-          <CustomLayout>
-            {children}
-          </CustomLayout>
-          </body>
+        <body className={inter.className}>{children}</body>
       </ThemeProvider>
     </html>
   );

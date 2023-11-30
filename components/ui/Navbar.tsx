@@ -2,10 +2,9 @@ import { AppBar, IconButton, Toolbar, Typography } from "@mui/material"
 import MenuIcon from '@mui/icons-material/Menu';
 
 export const Navbar = () => {
+    // <AppBar position="sticky" elevation={0}>
     return (
-        // <AppBar position="sticky" elevation={0}>
         <AppBar position="sticky" elevation={0}>
-            {/* elevation off task */}
             <Toolbar>
                 <IconButton
                     size="large"
@@ -13,7 +12,7 @@ export const Navbar = () => {
                 >
                     <MenuIcon/>
                 </IconButton>
-                <Typography>OpenJira</Typography>
+                <Typography variant="h2" >OpenJira</Typography>
             </Toolbar>
         </AppBar>
      )
