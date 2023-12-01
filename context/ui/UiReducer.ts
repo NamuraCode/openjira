@@ -17,6 +17,6 @@ export const UiReducer = (state: UiState, action: UiActionType): UiState => {
         sideMenuOpen: false,
       };
     default:
-        return state
+      return state;
   }
 };

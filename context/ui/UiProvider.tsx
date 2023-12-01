@@ -11,7 +11,7 @@ const UI_INITIAL_STATE : UiState = {
 
 export const UiProvider = ( children : ReactNode)=>{
     const [ state, dispatch ] = useReducer(UiReducer, UI_INITIAL_STATE) 
-
+    
     return(
         <UiContext.Provider value={{
             sideMenuOpen: false
