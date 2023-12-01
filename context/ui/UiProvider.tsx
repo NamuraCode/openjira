@@ -1,6 +1,5 @@
 import { ReactNode, useReducer } from 'react'
-import { UiContext } from '.'
-import { UiReducer } from './UiReducer'
+import { UiContext, UiReducer } from '.'
 
 export interface UiState {
     sideMenuOpen: boolean
