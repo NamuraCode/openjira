@@ -1,9 +1,7 @@
 import { createContext } from "react";
 
 interface contextProps {
-    sideMenuOpen: boolean
+  sideMenuOpen: boolean;
 }
 
-export const Uicontext =  createContext({} as contextProps)
-
-
+export const UiContext = createContext({} as contextProps);
