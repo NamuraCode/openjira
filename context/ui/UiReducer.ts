@@ -4,7 +4,7 @@ type UiActionType =
   | { type: "Ui - Open Sidebar" }
   | { type: "Ui - Close Sidebar" };
 
-export const uiReducer = (state: UiState, action: UiActionType): UiState => {
+export const UiReducer = (state: UiState, action: UiActionType): UiState => {
   switch (action.type) {
     case "Ui - Open Sidebar":
       return {
