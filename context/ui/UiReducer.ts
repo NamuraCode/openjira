@@ -11,7 +11,7 @@ export const UiReducer = (state: UiState, action: UiActionType): UiState => {
         ...state,
         sideMenuOpen: true,
       };
-    case "Ui - Open Sidebar":
+    case "Ui - Close Sidebar":
       return {
         ...state,
         sideMenuOpen: false,

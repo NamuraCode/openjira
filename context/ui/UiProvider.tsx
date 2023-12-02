@@ -1,3 +1,5 @@
+"use client"
+
 import { ReactNode, useReducer } from 'react'
 import { UiContext, UiReducer } from './'
 
@@ -15,10 +17,20 @@ const UI_INITIAL_STATE : UiState = {
 
 export const UiProvider = ( {children} : UiProviderProps)=>{
     const [ state, dispatch ] = useReducer(UiReducer, UI_INITIAL_STATE) 
-    
+
+    const openSideMenu = ()=>{
+        dispatch({type: "Ui - Open Sidebar"} )
+    }
+
+    const closeSideMenu = ()=>{
+        dispatch({type: "Ui - Close Sidebar"} )
+    }
     return(
         <UiContext.Provider value={{
             ...state,
+            //Methods
+            openSideMenu,
+            closeSideMenu
         }}>
             {children}
         </UiContext.Provider>
