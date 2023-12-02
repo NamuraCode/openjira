@@ -1,12 +1,17 @@
 'use client'
 
+import { useContext } from "react";
+
 import { Box, Divider, Drawer, List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material"
 import InboxIcon from '@mui/icons-material/Inbox';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import { UiContext } from "@/context/ui";
 
 const menuItems : string[] = ["Inbox", "starred", "Send Email", "Drafts"]
 
 export const Sidebar = () => {
+
+    const { sideMenuOpen } = useContext(UiContext)
 
     return (
         <Drawer
