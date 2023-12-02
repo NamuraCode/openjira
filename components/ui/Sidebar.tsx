@@ -10,13 +10,12 @@ import { UiContext } from "@/context/ui";
 const menuItems : string[] = ["Inbox", "starred", "Send Email", "Drafts"]
 
 export const Sidebar = () => {
-
     const { sideMenuOpen } = useContext(UiContext)
 
     return (
         <Drawer
         anchor="left"
-        open={true}
+        open={ sideMenuOpen }
         onClose={()=>{ console.log("aaaa")}}
         >
             <Box sx={{ width: 250 }}>
