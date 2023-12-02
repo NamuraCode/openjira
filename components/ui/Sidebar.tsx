@@ -10,7 +10,7 @@ import { UiContext } from "@/context/ui";
 const menuItems : string[] = ["Inbox", "starred", "Send Email", "Drafts"]
 
 export const Sidebar = () => {
-    const { sideMenuOpen } = useContext(UiContext)
+    const { sideMenuOpen } = useContext( UiContext )
 
     return (
         <Drawer

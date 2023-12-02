@@ -18,7 +18,7 @@ export const UiProvider = ( {children} : UiProviderProps)=>{
     
     return(
         <UiContext.Provider value={{
-            sideMenuOpen: false
+            ...state,
         }}>
             {children}
         </UiContext.Provider>
