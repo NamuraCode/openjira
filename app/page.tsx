@@ -1,12 +1,19 @@
 import { CustomLayout } from '@/layout';
 import RootLayout from './layout';
-import { Typography } from '@mui/material';
+
+import { Card, CardHeader, Grid, Typography } from '@mui/material';
 
 export default function HomePage() {
   return (
-    <RootLayout title='Home'>
+    <RootLayout title='Home - OpenJira'>
       <CustomLayout>
-        <Typography variant='h1'>Hello World</Typography>
+        <Grid container spacing={ 2 }>
+          <Grid item xs={ 12 } sm={ 4 }>
+            <Card>
+              <CardHeader title={"To do"}></CardHeader>
+            </Card>
+          </Grid>
+        </Grid>
       </CustomLayout>
     </RootLayout>
   );
