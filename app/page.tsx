@@ -1,7 +1,7 @@
 import { CustomLayout } from '@/layout';
 import RootLayout from './layout';
 
-import { Card, CardHeader, Grid, Typography } from '@mui/material';
+import { Card, CardContent, CardHeader, Grid, Typography } from '@mui/material';
 
 export default function HomePage() {
   return (
@@ -11,6 +11,10 @@ export default function HomePage() {
           <Grid item xs={ 12 } sm={ 4 }>
             <Card sx={{ height: 'calc(100vh - 100px )'}}>
               <CardHeader title={"To do"}></CardHeader>
+              <CardContent>
+                { /* I need do something for add new entries */}
+                { /* List of entries */}
+              </CardContent>
             </Card>
           </Grid>
           <Grid item xs={ 12 } sm={ 4 }>
