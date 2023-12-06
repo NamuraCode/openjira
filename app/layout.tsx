@@ -4,6 +4,7 @@ import "./globals.css";
 import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import { darkTheme, lightTheme } from "@/themes";
 import { UiProvider } from "@/context/ui";
+import { EntriesProvider } from "@/context/entries";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,12 +25,14 @@ export default function RootLayout({
         />
         <link rel="shortcut icon" href="/next.svg" />
       </head>
-      <UiProvider>
-        <ThemeProvider theme={darkTheme}>
-          <CssBaseline />
-          <body className={inter.className}>{children}</body>
-        </ThemeProvider>
-      </UiProvider>
+      <EntriesProvider>
+        <UiProvider>
+          <ThemeProvider theme={darkTheme}>
+            <CssBaseline />
+            <body className={inter.className}>{children}</body>
+          </ThemeProvider>
+        </UiProvider>
+      </EntriesProvider>
     </html>
   );
 }

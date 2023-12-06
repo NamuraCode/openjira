@@ -4,6 +4,10 @@ import { v4 as uuidv4 } from "uuid";
 import { Entry } from "@/interfaces";
 import { EntriesContext, entriesReducer } from ".";
 
+interface EntriesProviderProps {
+    children: ReactNode
+}
+
 export interface EntriesState {
   entries: Entry[];
 }
@@ -34,7 +38,7 @@ const ENTRIES_INITIAL_STATE: EntriesState = {
   ],
 };
 
-export const EntriesProvider = (children: ReactNode) => {
+export const EntriesProvider = ({ children }: EntriesProviderProps) => {
   const [state, dispatch] = useReducer(entriesReducer, ENTRIES_INITIAL_STATE);
 
   return (
