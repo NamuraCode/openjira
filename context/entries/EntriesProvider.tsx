@@ -1,8 +1,9 @@
 import { ReactNode, useReducer } from 'react'
 import { EntriesContext, entriesReducer } from '.'
+import { Entry } from '@/interfaces'
 
 export interface EntriesState {
-    entries: []
+    entries: Entry[]
 }
 
 const ENTRIES_INITIAL_STATE : EntriesState = {

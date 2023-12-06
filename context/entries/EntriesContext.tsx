@@ -1,7 +1,8 @@
+import { Entry } from '@/interfaces'
 import { createContext } from 'react'
 
 interface contextProps {
-  entries: [] //tipado
+  entries: Entry[] //tipado
 }
 
 export const EntriesContext =  createContext({} as contextProps)
