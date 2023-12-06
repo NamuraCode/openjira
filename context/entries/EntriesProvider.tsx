@@ -1,11 +1,11 @@
 import { ReactNode, useReducer } from 'react'
 import { EntriesContext, entriesReducer } from '.'
 
-export interface UiState {
+export interface entriesState {
     prop: boolean
 }
 
-const ENTRIES_INITIAL_STATE : UiState = {
+const ENTRIES_INITIAL_STATE : entriesState = {
     prop: false
 } 
 
