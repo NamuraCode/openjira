@@ -1,15 +1,15 @@
-import { entriesState } from './';
+import { EntriesState } from './';
 
-type entriesActionType =
-| { type: 'entries - Name' }
+type EntriesActionType =
+| { type: 'entries - add' }
 
-export const entriesReducer = (state: entriesState, action: entriesActionType): entriesState => {
+export const entriesReducer = (state: EntriesState, action: EntriesActionType): EntriesState => {
 
      switch (action.type) {
-          case 'entries - Name':
-               return {
-                    ...state,
-               };
+        //   case 'entries - add':
+        //        return {
+        //             ...state,
+        //        };
           default:
                return state
      }

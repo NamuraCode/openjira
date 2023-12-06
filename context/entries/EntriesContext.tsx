@@ -1,7 +1,7 @@
 import { createContext } from 'react'
 
 interface contextProps {
-  prop: boolean
+  entries: [] //tipado
 }
 
 export const EntriesContext =  createContext({} as contextProps)

@@ -1,12 +1,12 @@
 import { ReactNode, useReducer } from 'react'
 import { EntriesContext, entriesReducer } from '.'
 
-export interface entriesState {
-    prop: boolean
+export interface EntriesState {
+    entries: []
 }
 
-const ENTRIES_INITIAL_STATE : entriesState = {
-    prop: false
+const ENTRIES_INITIAL_STATE : EntriesState = {
+    entries: []
 } 
 
 export const EntriesProvider = ( children : ReactNode)=>{
@@ -14,7 +14,7 @@ export const EntriesProvider = ( children : ReactNode)=>{
 
     return(
         <EntriesContext.Provider value={{
-            prop: false
+            ...state
         }}>
             {children}
         </EntriesContext.Provider>
