@@ -1,10 +1,12 @@
 "use client";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import { Box, CssBaseline, ThemeProvider } from "@mui/material";
-import { darkTheme, lightTheme } from "@/themes";
+import "./globals.css";
+
 import { UiProvider } from "@/context/ui";
 import { EntriesProvider } from "@/context/entries";
+
+import { darkTheme, lightTheme } from "@/themes";
 
 const inter = Inter({ subsets: ["latin"] });
 
